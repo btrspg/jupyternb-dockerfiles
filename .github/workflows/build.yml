@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker image build
       run: |
-        docker build .  -t newbuild
+        docker build -f single_cell/Dockerfile  -t newbuild single_cell
     - name: docker hub login
       run: |
         echo "${{ secrets.dockerhub_token }}" | docker login  -u ${{ secrets.dockerhub_user }} --password-stdin
