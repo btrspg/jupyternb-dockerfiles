@@ -13,10 +13,10 @@ COPY install_apt.bash /opt/
 COPY install_Rpackages.R /opt/
 COPY install_pip.bash /opt/
 
-RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version
-RUN bash /opt/install_pip.bash
-RUN Rscript /opt/install_Rpackages.R
-RUN rm -rf /tmp/* \
+RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version \
+  && bash /opt/install_pip.bash \
+  && Rscript /opt/install_Rpackages.R \
+  && rm -rf /tmp/* \
   && echo "${nb_user}" 'ALL=(ALL) NOPASSWD: /usr/bin/apt-get' >> /etc/sudoers \
   && apt-get remove --purge -y \
   && apt-get autoremove -y \
