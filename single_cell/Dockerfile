@@ -14,25 +14,25 @@ COPY install_Rpackages.R /opt/
 COPY install_pip.bash /opt/
 
 RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version
-#RUN bash /opt/install_pip.bash
-#RUN Rscript /opt/install_Rpackages.R
-#RUN rm -rf /tmp/* \
-#  && echo "${nb_user}" 'ALL=(ALL) NOPASSWD: /usr/bin/apt-get' >> /etc/sudoers \
-#  && apt-get remove --purge -y \
-#  && apt-get autoremove -y \
-#  && apt-get autoclean -y \
-#  && rm -rf /var/lib/apt/lists/* \
-#  && rm -rf /root/.cache
-#
-#COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
-#COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
-#
-#USER $nb_user
-#RUN Rscript -e "IRkernel::installspec(name = 'ir40', displayname = 'R 4.0')"
-#ENV HOME /home/$nb_user
-#WORKDIR /opt/work
-#
-#EXPOSE 8888
-#
-#ENTRYPOINT ["/usr/local/bin/tini", "--"]
+RUN bash /opt/install_pip.bash
+RUN Rscript /opt/install_Rpackages.R
+RUN rm -rf /tmp/* \
+  && echo "${nb_user}" 'ALL=(ALL) NOPASSWD: /usr/bin/apt-get' >> /etc/sudoers \
+  && apt-get remove --purge -y \
+  && apt-get autoremove -y \
+  && apt-get autoclean -y \
+  && rm -rf /var/lib/apt/lists/* \
+  && rm -rf /root/.cache
+
+COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
+COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
+
+USER $nb_user
+RUN Rscript -e "IRkernel::installspec(name = 'ir40', displayname = 'R 4.0')"
+ENV HOME /home/$nb_user
+WORKDIR /opt/work
+
+EXPOSE 8888
+
+ENTRYPOINT ["/usr/local/bin/tini", "--"]
 CMD ["jupyter",'notebook']
