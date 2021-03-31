@@ -11,6 +11,7 @@ apt-get install -y \
 	      libssl-dev \
 	      libxml2-dev \
         lsb-release \
+        libxt-dev \
         dialog \
         software-properties-common
 apt-key adv \
