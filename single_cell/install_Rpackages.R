@@ -7,7 +7,7 @@ install.packages(packages)
 
 BiocManager::install("Biobase")
 BiocManager::install("BiocGenerics")
-IRkernel::installspec(name = 'ir40', displayname = 'R 4.0')
+IRkernel::installspec(user = FALSE)
 
 
 devtools::install_github("jokergoo/ComplexHeatmap",upgrade_dependencies=FALSE)

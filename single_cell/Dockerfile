@@ -28,7 +28,6 @@ COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
 COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
 
 USER $nb_user
-RUN Rscript -e "IRkernel::installspec(name = 'ir40', displayname = 'R 4.0')"
 ENV HOME /home/$nb_user
 WORKDIR /opt/work
 
