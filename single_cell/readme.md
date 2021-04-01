@@ -21,7 +21,7 @@ If you are using singularity, you can use like this:
 # first pull down the image
 singularity pull -F docker://index.docker.io/btrspg/jnb:singlecell-dev
 # then run
-singularity run -B `pwd`:/opt/work/ -W /opt/work jnb_singlecell-dev.sif 
+singularity run -B `pwd`:/opt/work/ --no-home -W /opt/work jnb_singlecell-dev.sif 
 
 ```
 
