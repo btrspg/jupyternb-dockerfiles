@@ -12,6 +12,7 @@ ENV nb_user=$UN \
 COPY install_apt.bash /opt/
 COPY install_Rpackages.R /opt/
 COPY install_pip.bash /opt/
+COPY requirements.txt /opt/
 
 RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version \
   && bash /opt/install_pip.bash \
