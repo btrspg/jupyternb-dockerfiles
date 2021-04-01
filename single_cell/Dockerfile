@@ -2,12 +2,19 @@ FROM ubuntu:20.04
 
 MAINTAINER Yuelong CHEN <yuelong.chen.btr@gmail.com>
 
-ARG DEBIAN_FRONTEND=noninteractive
 ARG UN=logan
 ARG UID=1007
-ENV JUPYTER_ENABLE_LAB=1
-ENV nb_user=$UN \
-    nb_uid=$UID
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    nb_user=$UN \
+    nb_uid=$UID \
+    SHELL=/bin/bash \
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US.UTF-8 \
+    JUPYTER_ENABLE_LAB=1
+
+
 
 COPY install_apt.bash /opt/
 COPY install_Rpackages.R /opt/
@@ -34,5 +41,5 @@ WORKDIR /opt/work
 
 EXPOSE 8888
 
-ENTRYPOINT ["/usr/local/bin/tini", "--"]
-CMD ["jupyter",'notebook']
+
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8888"]
