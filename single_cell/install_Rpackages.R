@@ -1,7 +1,7 @@
 #! /usr/bin/env Rscript
 
 options(install.packages.compile.from.source = "always")
-chooseCRANmirror(ind=17)
+chooseCRANmirror(ind=0)
 packages <- c('devtools','IRkernel','BiocManager')
 install.packages(packages)
 
