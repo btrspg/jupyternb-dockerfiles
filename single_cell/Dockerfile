@@ -36,7 +36,7 @@ USER $nb_user
 ENV HOME /home/$nb_user
 WORKDIR /opt/work
 
-EXPOSE 8888
+EXPOSE 9898
 
 
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8888",'--no-browser','--port','9898','--notebook-dir',
