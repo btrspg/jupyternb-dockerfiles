@@ -9,9 +9,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
     nb_user=$UN \
     nb_uid=$UID \
     SHELL=/bin/bash \
-    LC_ALL=en_US.UTF-8 \
-    LANG=en_US.UTF-8 \
-    LANGUAGE=en_US.UTF-8 \
     JUPYTER_ENABLE_LAB=1
 
 
