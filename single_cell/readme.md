@@ -1,10 +1,29 @@
 # single cell jupyter notebook
 
+jupyter notebook password: `singlecell`
 
+Because I used my own uid and gid to create the user in the docker image, so if you want to use it, you have two 
+choices:
 
+1. change the permission of your fold to 777, so that the user in the container could write and read.
+2. build another docker image by yourself using my Dockerfile.(Either change the uid and gid in the dockerfile or 
+   specify the uid and gid as a `build` parameter.)
 
-jupyter notebook password: singlecell
+If you are using docker, you can use like this:
+```bash
+docker run --rm -it -p 8888:8888 -v `pwd`:/opt/work btrspg/jnb:singlecell-dev  
+```
 
+And then you could use the browser to do the coding work.
+
+If you are using singularity, you can use like this:
+```bash
+# first pull down the image
+singularity pull -F docker://index.docker.io/btrspg/jnb:singlecell-dev
+# then run
+singularity run -B `pwd`:/opt/work/ -W /opt/work jnb_singlecell-dev.sif 
+
+```
 
 
 ## Installed packages
