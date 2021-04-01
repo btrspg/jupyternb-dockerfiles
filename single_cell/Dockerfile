@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 MAINTAINER Yuelong CHEN <yuelong.chen.btr@gmail.com>
 
-ARG UN=logan
+ARG UN=nbuser
 ARG UID=1007
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -39,4 +39,4 @@ WORKDIR /opt/work
 EXPOSE 9898
 
 
-CMD ["jupyter", "notebook"]
+CMD ["jupyter", "notebook","--config","/home/$nb_user/.jupyter/jupyter_notebook_config.py"]
