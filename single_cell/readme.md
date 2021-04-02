@@ -19,11 +19,9 @@ And then you could use the browser to do the coding work.
 If you are using singularity, you can use like this:
 ```bash
 # first pull down the image
-singularity pull -F docker://index.docker.io/btrspg/jnb:singlecell-dev
-# second, to make the image wriable
-singularity build --sanbox somewhere/ jnb_singlecell-dev.sif 
+singularity build  --sandbox jnb_singlecell-dev/ docker://btrspg/jnb:singlecell-dev
 # then run
-singularity run -B `pwd`:/opt/work/ --no-home -W /opt/work -w somewhere/
+singularity run -B `pwd`:/opt/work/ --no-home -W /opt/work -w jnb_singlecell-dev/
 ```
 
 
