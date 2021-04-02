@@ -1,5 +1,12 @@
-name: BUILD & PUSH
-on: [push, pull_request, workflow_dispatch]
+name: single_cell_jnb_environment
+on:
+  push:
+    paths:
+      - 'single_cell/**'
+  pull_request:
+    paths:
+      - 'single_cell/**'
+  workflow_dispatch:
 jobs:
   build_push:
     runs-on: ubuntu-latest
