@@ -12,3 +12,8 @@ on the server.
 This is the first time I've ever tried. I hope it works.
 
 
+## Environments
+
+- Nanopore analysis 
+
+- Single-Cell RNA-seq analysis

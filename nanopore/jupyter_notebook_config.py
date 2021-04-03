@@ -117,7 +117,7 @@
 #  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along
 #  with hostnames configured in local_hostnames.
 #  Default: False
-# c.NotebookApp.allow_remote_access = False
+c.NotebookApp.allow_remote_access = True
 
 ## Whether to allow the user to run the notebook as root.
 #  Default: False
@@ -372,7 +372,7 @@ c.NotebookApp.ip = '0.0.0.0'
 
 ## The directory to use for notebooks and kernels.
 #  Default: ''
-# c.NotebookApp.notebook_dir = ''
+c.NotebookApp.notebook_dir = '/opt/work'
 
 ## Whether to open in a browser after starting. The specific browser used is
 #  platform dependent and determined by the python standard library `webbrowser`
@@ -402,7 +402,7 @@ c.NotebookApp.open_browser = False
 
 ## The port the notebook server will listen on (env: JUPYTER_PORT).
 #  Default: 8888
-# c.NotebookApp.port = 8888
+c.NotebookApp.port = 9898
 
 ## The number of additional ports to try if the specified port is not available
 #  (env: JUPYTER_PORT_RETRIES).
