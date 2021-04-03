@@ -10,7 +10,13 @@ jupyterlab
 notebook
 bokeh
 ipywidgets
+cython
+scipy
+h5py
 jupyterhub
+rpy2
+tqdm
+mappy
 ont-tombo
 schemdraw
 emoji
