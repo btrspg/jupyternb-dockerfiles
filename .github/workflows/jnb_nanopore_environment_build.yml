@@ -17,11 +17,11 @@ jobs:
         docker build -f nanopore/Dockerfile  -t newbuild nanopore
     - name: environment test
       run: |
-        docker run --rm -it newbuild bash -c "samtools --help"
-        docker run --rm -it newbuild bash -c "stringtie --help"
-        docker run --rm -it newbuild bash -c "minimap2 --help"
-        docker run --rm -it newbuild bash -c "gffcompare --help"
-        docker run --rm -it newbuild bash -c "nanopolish --help"
+        docker run --rm newbuild bash -c "samtools --help"
+        docker run --rm newbuild bash -c "stringtie --help"
+        docker run --rm newbuild bash -c "minimap2 --help"
+        docker run --rm newbuild bash -c "gffcompare --help"
+        docker run --rm newbuild bash -c "nanopolish --help"
     - name: docker hub login
       run: |
         echo "${{ secrets.dockerhub_token }}" | docker login  -u ${{ secrets.dockerhub_user }} --password-stdin
