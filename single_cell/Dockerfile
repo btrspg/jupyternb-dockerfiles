@@ -27,7 +27,7 @@ RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version \
   && apt-get autoremove -y \
   && apt-get autoclean -y \
   && rm -rf /var/lib/apt/lists/* \
-  && rm -rf /root/.cache
+  && rm -rf /root/.cache && mkdir /expt /NFS
 
 COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
 COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
