@@ -29,3 +29,5 @@ cd /tmp/  && git clone --recursive https://github.com/jts/nanopolish.git && cd n
 wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.12.2.Linux_x86_64.tar.gz -O /tmp/gffcompare-0.12.2.Linux_x86_64.tar.gz
 tar -zxvf /tmp/gffcompare-0.12.2.Linux_x86_64.tar.gz -C /tmp/
 cp /tmp/gffcompare-0.12.2.Linux_x86_64/gffcompare /usr/local/bin/
+
+cd /tmp/ &&  git clone https://github.com/gpertea/gffread && cd gffread && make release && cp gffread /usr/local/bin/

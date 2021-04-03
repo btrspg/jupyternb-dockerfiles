@@ -24,3 +24,4 @@ click
 click-log
 scikit-learn
 ont-fast5-api
+NanoCount
