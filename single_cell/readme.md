@@ -19,9 +19,11 @@ And then you could use the browser to do the coding work.
 If you are using singularity, you can use like this:
 ```bash
 # first pull down the image
+
 singularity build  --sandbox jnb_singlecell-dev/ docker://btrspg/jnb:singlecell-dev
 # then run
 singularity run -B `pwd`:/opt/work/ --no-home -W /opt/work -w jnb_singlecell-dev/
+
 ```
 
 
