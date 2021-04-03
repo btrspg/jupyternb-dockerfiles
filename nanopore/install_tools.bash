@@ -23,8 +23,8 @@ cp /tmp/stringtie-2.1.5.Linux_x86_64/stringtie /usr/local/bin/
 cp /tmp/stringtie-2.1.5.Linux_x86_64/prepDE.py3 /usr/local/bin/prepDE
 
 
-cd /tmp/  && git clone --recursive https://github.com/jts/nanopolish.git && cd nanopolish && make && cp nanopolish
-/usr/local/bin
+cd /tmp/  && git clone --recursive https://github.com/jts/nanopolish.git && cd nanopolish && make \
+  && cp nanopolish /usr/local/bin
 
 wget http://ccb.jhu.edu/software/stringtie/dl/gffcompare-0.12.2.Linux_x86_64.tar.gz -O /tmp/gffcompare-0.12.2.Linux_x86_64.tar.gz
 tar -zxvf /tmp/gffcompare-0.12.2.Linux_x86_64.tar.gz -C /tmp/
