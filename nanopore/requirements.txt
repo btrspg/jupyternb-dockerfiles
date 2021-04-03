@@ -11,7 +11,7 @@ notebook
 bokeh
 ipywidgets
 jupyterhub
-ont-tombo[full]
+ont-tombo
 schemdraw
 emoji
 pysam
