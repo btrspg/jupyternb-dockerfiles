@@ -17,7 +17,6 @@ jupyterhub
 rpy2
 tqdm
 mappy
-ont-tombo
 schemdraw
 emoji
 pysam
