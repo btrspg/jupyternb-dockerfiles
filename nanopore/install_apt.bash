@@ -13,7 +13,6 @@ apt-get install -y \
         lsb-release \
         libxt-dev \
         dialog \
-        gzip \
         software-properties-common
 apt-key adv \
         --keyserver keyserver.ubuntu.com \
@@ -34,6 +33,7 @@ apt-get install -y \
         r-base \
         r-base-dev \
         sudo \
+        gzip \
         wget \
         curl \
         libhdf5-dev \
