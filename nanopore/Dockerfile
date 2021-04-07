@@ -9,8 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     nb_user=$UN \
     nb_uid=$UID \
     SHELL=/bin/bash \
-    JUPYTER_ENABLE_LAB=1
-
+    JUPYTER_ENABLE_LAB=1 \
+    TINI_VERSION=v0.18.0
 
 
 COPY install_apt.bash /opt/
@@ -34,6 +34,10 @@ RUN bash /opt/install_apt.bash \
 COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
 COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
 
+
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+RUN chmod +x /usr/bin/tini
+ENTRYPOINT ["/usr/bin/tini", "--"]
 
 USER $nb_user
 ENV HOME /home/$nb_user
