@@ -33,7 +33,7 @@ RUN bash /opt/install_apt.bash && Rscript --version  && python3 --version \
 COPY jupyter_notebook_config.py /home/$nb_user/.jupyter/
 COPY jupyter_notebook_config.json /home/$nb_user/.jupyter/
 
-
+# as https://jupyter-notebook.readthedocs.io/en/stable/public_server.html recommend
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini
 ENTRYPOINT ["/usr/bin/tini", "--"]
