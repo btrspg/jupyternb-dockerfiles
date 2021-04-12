@@ -1,5 +1,4 @@
-numba
-pytables
+numba==0.52.0
 statsmodel
 jinja2
 pandas
