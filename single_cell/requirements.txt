@@ -1,4 +1,3 @@
-statsmodel
 jinja2
 pandas
 pytest
