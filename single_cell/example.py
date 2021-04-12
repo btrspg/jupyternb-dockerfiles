@@ -22,7 +22,7 @@ sc.settings.set_figure_params(dpi=80, facecolor='white')
 adata = sc.read_10x_mtx(
     '/tmp/data/filtered_gene_bc_matrices/hg19/',  # the directory with the `.mtx` file
     var_names='gene_symbols',                # use gene symbols for the variable names (variables-axis index)
-    cache=True)
+    cache=False)
 
 adata.var_names_make_unique()
 
