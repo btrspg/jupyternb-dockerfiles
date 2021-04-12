@@ -1,12 +1,13 @@
+numba
+pytables
+statsmodel
 jinja2
-numpy
 pandas
 pytest
 sphinx
 tzlocal
 rpy2
 seaborn
-scanpy
 leidenalg
 nbdev
 jupyter
@@ -23,5 +24,6 @@ notebook
 bokeh
 ipywidgets
 jupyterhub
+
 
 
