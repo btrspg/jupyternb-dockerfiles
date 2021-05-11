@@ -1,4 +1,4 @@
-name: nanopore_jn_environment
+name: develop_jn_environment
 on:
   push:
     paths:
@@ -14,10 +14,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker image build
       run: |
-        docker build -f nanopore/Dockerfile  -t newbuild nanopore
+        docker build -f general_dev/Dockerfile  -t newbuild general_dev
     - name: environment test
       run: |
-        docker run --rm newbuild bash -c "samtools --help"
+        docker run --rm newbuild -v `pwd`:`pwd` -w `pwd` bash -c "Rscript --help"
+
     - name: docker hub login
       run: |
         echo "${{ secrets.dockerhub_token }}" | docker login  -u ${{ secrets.dockerhub_user }} --password-stdin
