@@ -17,7 +17,7 @@ jobs:
         docker build -f general_dev/Dockerfile  -t newbuild general_dev
     - name: environment test
       run: |
-        docker run --rm newbuild -v `pwd`:`pwd` -w `pwd` bash -c "Rscript --help"
+        docker run --rm -v `pwd`:`pwd` -w `pwd` newbuild  bash -c "Rscript --help"
 
     - name: docker hub login
       run: |
