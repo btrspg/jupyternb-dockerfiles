@@ -26,3 +26,4 @@ scikit-learn
 ont-fast5-api
 NanoCount
 scrappie
+python-dtw
