@@ -37,7 +37,12 @@ apt-get install -y \
         wget \
         curl \
         libhdf5-dev \
-        python3-pip
+        python3-pip \
+        libcunit1 \
+        libcunit1-dev \
+        libhdf5-dev \
+        libopenblas-base \
+        libopenblas-dev
 
 
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
