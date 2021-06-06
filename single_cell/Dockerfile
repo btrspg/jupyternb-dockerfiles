@@ -45,4 +45,4 @@ WORKDIR /opt/work
 EXPOSE 9898
 
 
-CMD ["jupyter", "notebook"]
+CMD ["jupyter", "lab"]
