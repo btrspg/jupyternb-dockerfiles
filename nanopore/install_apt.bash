@@ -44,7 +44,13 @@ apt-get install -y \
         libopenblas-base \
         libopenblas-dev
 
-
+cd /tmp/ && \
+  wget https://github.com/google/fonts/archive/master.tar.gz -O gf.tar.gz && \
+  tar -xf gf.tar.gz && \
+  mkdir -p /usr/share/fonts/truetype/google-fonts && \
+  find $PWD/fonts-master/ -name "*.ttf" -exec install -m644 {} /usr/share/fonts/truetype/google-fonts/ \;  && \
+  rm -f gf.tar.gz && \
+  fc-cache -f && rm -rf /var/cache/*
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 apt-get install -y nodejs
 wget -O - https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
