@@ -6,6 +6,7 @@ apt-get install -y \
         apt-transport-https \
 	      dirmngr \
         gnupg \
+        fonts-open-sans \
 	      libcurl4-openssl-dev \
 	      libnlopt-dev \
 	      libssl-dev \

@@ -34,6 +34,7 @@ apt-get install -y \
         r-base-dev \
         sudo \
         gzip \
+        fonts-open-sans \
         wget \
         curl \
         libhdf5-dev \

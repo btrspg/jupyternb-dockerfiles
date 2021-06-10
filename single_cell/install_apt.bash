@@ -33,6 +33,7 @@ apt-get install -y \
         r-base \
         r-base-dev \
         sudo \
+        fonts-open-sans \
         wget \
         curl \
         libhdf5-dev \
