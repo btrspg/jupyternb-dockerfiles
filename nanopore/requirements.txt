@@ -27,3 +27,4 @@ ont-fast5-api
 NanoCount
 scrappie
 dtw-python
+statannot

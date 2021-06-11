@@ -22,5 +22,5 @@ bokeh
 ipywidgets
 jupyterhub
 bbknn
-
+statannot
 

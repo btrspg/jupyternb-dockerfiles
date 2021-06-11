@@ -22,3 +22,4 @@ pysam
 click
 click-log
 scikit-learn
+statannot
